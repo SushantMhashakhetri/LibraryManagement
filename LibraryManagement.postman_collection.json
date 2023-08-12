@@ -1,63 +1,35 @@
+LibraryManagement
+﻿
+
+POST
+AddUser
+http://localhost:8080/api/user/save
+﻿
+
+Body
+raw (json)
+json
 {
-	"info": {
-		"_postman_id": "37f18ada-bfc5-47bb-b07c-a2e1e10f23a0",
-		"name": "LibraryManagement",
-		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
-		"_exporter_id": "23489999"
-	},
-	"item": [
-		{
-			"name": "AddUser",
-			"request": {
-				"method": "POST",
-				"header": [],
-				"body": {
-					"mode": "raw",
-					"raw": "{\n    \"name\":\"sushant\"\n}",
-					"options": {
-						"raw": {
-							"language": "json"
-						}
-					}
-				},
-				"url": "http://localhost:8080/api/user/save"
-			},
-			"response": []
-		},
-		{
-			"name": "Add Book",
-			"request": {
-				"method": "POST",
-				"header": [],
-				"body": {
-					"mode": "raw",
-					"raw": "{\n    \"author\": \"MK Gandhi\",\n    \"title\": \"Experiments with truth\",\n    \"borrowed\": false\n}",
-					"options": {
-						"raw": {
-							"language": "json"
-						}
-					}
-				},
-				"url": "http://localhost:8080/api/books/add"
-			},
-			"response": []
-		},
-		{
-			"name": "Borrow Book",
-			"request": {
-				"method": "POST",
-				"header": [],
-				"url": "http://localhost:8080/api/books/1/borrow/1"
-			},
-			"response": []
-		},
-		{
-			"name": "Return Book",
-			"request": {
-				"method": "GET",
-				"header": []
-			},
-			"response": []
-		}
-	]
+    "name":"sushant"
 }
+POST
+Add Book
+http://localhost:8080/api/books/add
+﻿
+
+Body
+raw (json)
+json
+{
+    "author": "MK Gandhi",
+    "title": "Experiments with truth",
+    "borrowed": false
+}
+POST
+Borrow Book
+http://localhost:8080/api/books/1/borrow/1
+﻿
+
+GET
+Return Book
+http://localhost:8080/api/books/1/return
